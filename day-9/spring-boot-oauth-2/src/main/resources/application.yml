@@ -1,0 +1,13 @@
+server:
+  port: 8000
+
+# OAuth2 configuration for GitHub
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: [Client-ID]
+            client-secret: [Client-Secret]

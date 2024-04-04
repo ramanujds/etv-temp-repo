@@ -4,7 +4,14 @@ public class CurrencyConverter {
 
 
     public double convertCurrency(double amount, String sourceCurrency, String targetCurrency) {
-        return 0.0;
+
+        double convertedAmount = 0.0;
+
+
+        return convertedAmount;
+
+
+
     }
 
 }

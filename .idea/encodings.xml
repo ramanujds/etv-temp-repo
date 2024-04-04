@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/day-1/employee-hierarchy-with-exception-handling/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-1/employee-hierarchy-with-exception-handling/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-1/employee-hierarchy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-1/employee-hierarchy/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-2/employee-hierarchy-stream-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-2/employee-hierarchy-stream-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-3/low-latency-trading-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-3/low-latency-trading-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-4/OnlineShoppingApp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-4/OnlineShoppingApp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-4/TextProcessorApp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-4/TextProcessorApp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/day-7/bookstore-app/src/main/java" charset="UTF-8" />
+  </component>
+</project>

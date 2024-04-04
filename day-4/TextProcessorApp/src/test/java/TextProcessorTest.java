@@ -51,7 +51,7 @@ public class TextProcessorTest {
     // Test case for String indentation
     @Test
     public void testIndentString() {
-        assertEquals("  Hello\n    World", TextProcessor.indentString("Hello\nWorld", 2));
+        assertEquals("  Hello\n    World", TextProcessor.indentString("Hello\n  World", 2));
     }
 }
 

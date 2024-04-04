@@ -28,26 +28,26 @@ public class Main {
             System.out.println("Error: " + e.getMessage());
         }
 
-        try {
-            // Accepting user input for Developer
-            System.out.println("\nEnter Developer details:");
-            System.out.print("Name: ");
-            String developerName = scanner.nextLine();
-            System.out.print("Employee ID: ");
-            int developerID = Integer.parseInt(scanner.nextLine());
-            System.out.print("Salary: ");
-            double developerSalary = Double.parseDouble(scanner.nextLine());
-            System.out.print("Programming Language: ");
-            String programmingLanguage = scanner.nextLine();
-
-            Developer developer = new Developer(developerName, developerID, developerSalary, programmingLanguage);
-            developer.displayDetails();
-        } catch (NumberFormatException | InvalidEmployeeDataException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+//        try {
+//            // Accepting user input for Developer
+//            System.out.println("\nEnter Developer details:");
+//            System.out.print("Name: ");
+//            String developerName = scanner.nextLine();
+//            System.out.print("Employee ID: ");
+//            int developerID = Integer.parseInt(scanner.nextLine());
+//            System.out.print("Salary: ");
+//            double developerSalary = Double.parseDouble(scanner.nextLine());
+//            System.out.print("Programming Language: ");
+//            String programmingLanguage = scanner.nextLine();
+//
+//            Developer developer = new Developer(developerName, developerID, developerSalary, programmingLanguage);
+//            developer.displayDetails();
+//        } catch (NumberFormatException | InvalidEmployeeDataException e) {
+//            System.out.println("Error: " + e.getMessage());
+//        }
 
         scanner.close();
     }
 
-    }
+
 }

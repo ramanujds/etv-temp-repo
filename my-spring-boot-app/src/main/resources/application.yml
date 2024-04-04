@@ -1,0 +1,7 @@
+#spring:
+#  application:
+#    name:
+#      my-spring-boot-app
+#
+#server:
+#  port: 8000

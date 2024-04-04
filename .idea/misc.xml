@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/day-1/employee-hierarchy-with-exception-handling/pom.xml" />
+        <option value="$PROJECT_DIR$/day-1/employee-hierarchy/pom.xml" />
+        <option value="$PROJECT_DIR$/day-2/employee-hierarchy-stream-api/pom.xml" />
+        <option value="$PROJECT_DIR$/day-3/low-latency-trading-system/pom.xml" />
+        <option value="$PROJECT_DIR$/day-4/TextProcessorApp/pom.xml" />
+        <option value="$PROJECT_DIR$/day-4/OnlineShoppingApp/pom.xml" />
+        <option value="$PROJECT_DIR$/day-7/bookstore-app/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

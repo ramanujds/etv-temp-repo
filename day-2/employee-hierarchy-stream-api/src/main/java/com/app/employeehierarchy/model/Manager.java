@@ -1,5 +1,5 @@
 package com.app.employeehierarchy.model;
-public class Manager extends Employee {
+public final class Manager extends Employee {
     private int teamSize;
 
     public Manager(int employeeId, String name, double salary, int teamSize) {

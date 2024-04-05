@@ -1,18 +1,25 @@
 package com.myapp.userapp.api;
 
 import com.myapp.userapp.dto.UserDTO;
+import com.myapp.userapp.dto.UserResource;
 import com.myapp.userapp.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static org.springframework.hateoas.server.core.DummyInvocationUtils.methodOn;
+import static org.springframework.hateoas.server.core.WebHandler.linkTo;
+
+
 @RestController
 @RequestMapping("/api/v1/users")
-public class UserRestController {
+public  class UserRestController {
 
     @Autowired
     private UserService userService;
@@ -30,9 +37,29 @@ public class UserRestController {
     }
 
     @GetMapping("/{id}")
-    public UserDTO getUserById(@PathVariable("id") int userId){
-        return userService.getUserById(userId);
+    public UserResource getUserById(@PathVariable("id") int userId) {
+        UserDTO user = userService.getUserById(userId);
+
+
+        Link selfLink = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(UserRestController.class)
+                        .getUserById(userId))
+                        .withSelfRel();
+
+
+
+        UserResource userResource = new UserResource(selfLink,user.userId(),user.username(),user.email(),user.dob());
+
+
+
+
+        return userResource;
+
+
+
     }
+
+
+
 
     @GetMapping("/search")
     public UserDTO searchUserByName(@RequestParam("username") String username){

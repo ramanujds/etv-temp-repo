@@ -1,6 +1,7 @@
 package com.myapp.userapp.service;
 
 import com.myapp.userapp.dto.UserDTO;
+import com.myapp.userapp.exception.UserNotFoundException;
 import com.myapp.userapp.model.UserEntity;
 import com.myapp.userapp.repository.UserRepository;
 import com.myapp.userapp.util.UserEntityDtoUtil;
@@ -26,7 +27,7 @@ public class UserServiceImpl implements UserService{
     public UserDTO getUserById(int userId) {
         return userRepository.getUserById(userId)
                 .map(UserEntityDtoUtil::convertToDto)
-                .orElseThrow();
+                .orElseThrow(()->new UserNotFoundException("User with id "+userId+" not found"));
 
 
     }

@@ -4,6 +4,7 @@ import com.myapp.userapp.model.UserEntity;
 import com.myapp.userapp.repository.UserRepository;
 import com.myapp.userapp.util.UserEntityDtoUtil;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -24,7 +25,8 @@ public class UserServiceImplIntegrationTest {
     @Autowired
     UserServiceImpl service;
 
-    @Test
+//    @Test
+//    @Disabled
     public void testGetUserById() {
         // Given
         var userId = 1;

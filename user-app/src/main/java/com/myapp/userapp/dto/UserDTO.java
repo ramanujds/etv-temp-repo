@@ -7,6 +7,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
-public record UserDTO(@NotNull int userId, @NotBlank String username, String email,  LocalDate dob) {
+public record UserDTO(int userId, String username, String email,  LocalDate dob) {
 
 }

@@ -14,10 +14,10 @@ public class UserRepositoryImpl implements UserRepository {
 
     @PostConstruct
     public void init(){
-        users = new HashMap<>();
-        users.put(1,new UserEntity(1,"John","john@yahoo.com", LocalDate.of(1990,10,10)));
-        users.put(2,new UserEntity(2,"Smith","smith@yahoo.com", LocalDate.of(1991,11,11)));
-        users.put(3,new UserEntity(3,"Peter","peter@gmail.com", LocalDate.of(1992,12,12)));
+//        users = new HashMap<>();
+//        users.put(1,new UserEntity(1,"John","john@yahoo.com", LocalDate.of(1990,10,10)));
+//        users.put(2,new UserEntity(2,"Smith","smith@yahoo.com", LocalDate.of(1991,11,11)));
+//        users.put(3,new UserEntity(3,"Peter","peter@gmail.com", LocalDate.of(1992,12,12)));
 
     }
 

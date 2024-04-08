@@ -1,4 +1,4 @@
 FROM eclipse-temurin:17-jre
 WORKDIR /
-ADD target/user-app.war user-app.war
-CMD java -jar user-app.war
+ADD target/user-app.war uapp.jar
+CMD java -jar app.jar

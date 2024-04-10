@@ -6,14 +6,20 @@ import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.myapp.userapp.dto.UserDTO;
 import com.myapp.userapp.model.UserEntity;
+import com.myapp.userapp.service.UserService;
 import com.myapp.userapp.service.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.springdoc.core.configuration.SpringDocSecurityConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -27,17 +33,18 @@ import java.time.LocalDate;
 
 
 
-
-@ExtendWith(SpringExtension.class)
-@WebMvcTest(UserRestController.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+//@ExtendWith(SpringExtension.class)
+//@WebMvcTest(UserRestController.class)
 public class UserRestControllerTest {
 
     @Autowired
     MockMvc mvc;
 
 
-    @MockBean
-    UserServiceImpl service;
+    @Autowired
+    UserService service;
 
     @Test
     public void testGetUserById() throws Exception {
@@ -45,7 +52,7 @@ public class UserRestControllerTest {
         int userId = 1;
         var user = new UserDTO(1,"abc","abc@yahoo.com", LocalDate.of(2000,10,10));
         // When
-        Mockito.when(service.getUserById(userId)).thenReturn(user);
+      //  Mockito.when(service.getUserById(userId)).thenReturn(user);
 
         mvc.perform(MockMvcRequestBuilders.get("/api/v1/users/"+userId))
                 .andExpect(MockMvcResultMatchers.status().isOk())
@@ -58,7 +65,7 @@ public class UserRestControllerTest {
         // Given
         var user = new UserDTO(1,"abc","abc@yahoo.com", LocalDate.of(2000,10,10));
         // When
-        Mockito.when(service.saveUser(user)).thenReturn(user);
+      //  Mockito.when(service.saveUser(user)).thenReturn(user);
 
         mvc.perform(MockMvcRequestBuilders.post("/api/v1/users")
                         .contentType("application/json")

@@ -34,23 +34,24 @@ public class SecurityConfig {
     @Autowired
     JwtAuthFilter authFilter;
 
-//    @Bean
-//    public UserDetailsService getUserDetails(){
-//
-//        User.UserBuilder users = User.withDefaultPasswordEncoder();
-//        UserDetails admin = users.username("admin")
-//                .password("admin123")
-//                .roles("ADMIN")
-//                .build();
-//
-//        UserDetails user = users.username("user")
-//                .password("user123")
-//                .roles("USER")
-//                .build();
-//
-//        return new InMemoryUserDetailsManager(user,admin);
-//
-//    }
+    @Bean
+    public UserDetailsService getUserDetails(){
+
+        User.UserBuilder users = User.withDefaultPasswordEncoder();
+        UserDetails admin = users.username("admin")
+                .password("admin123")
+                .roles("ADMIN")
+                .build();
+
+        UserDetails user = users.username("user")
+                .password("user123")
+                .roles("USER")
+                .build();
+        return new InMemoryUserDetailsManager(user,admin);
+
+    }
+
+
 
 
 
